@@ -3,12 +3,11 @@ from pprint import pprint
 import pandas as pd
 
 
-with open(r"C:\Users\113414A009MEH\Documents\dev\intro_michinoeki\Roadside_Stationhokkaido.json", encoding="utf-8") as f:
-    s = f.read()
+df = pd.read_json(
+    r"C:\Users\113414A009MEH\Documents\dev\intro_michinoeki\Roadside_Stationhokkaido.json",
+    encoding="utf-8")
 
-jsondata = json.loads(s)
+df_f = df["features"]
 
-for data in jsondata["features"]:
-    print(data["properties"]["P35_006"])
-
-print(len(jsondata["features"]))
+for d in df_f:
+    print(f'{d["properties"]["P35_006"]} : {d["geometry"]["coordinates"]}')
