@@ -15,6 +15,6 @@ for data in df_f:
     d = data["properties"]
     folium.Marker(
         [d["P35_001"], d["P35_002"]],
-        popup=d["P35_006"]).add_to(m)
+        popup=folium.Popup(d["P35_006"], max_width=200)).add_to(m)
 
 m.save("michinoekimap.html")
