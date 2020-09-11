@@ -3,7 +3,7 @@ from pprint import pprint
 import pandas as pd
 import folium
 
-m = folium.Map(location=[43.06417, 141.34694], zoom_start=6)
+m = folium.Map(location=[43.06417, 141.34694], zoom_start=7)
 
 df = pd.read_json(
     r"C:\Users\113414A009MEH\Documents\dev\intro_michinoeki\Roadside_Stationhokkaido.json",
